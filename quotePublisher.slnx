@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuotePublisher.Contracts/QuotePublisher.Contracts.csproj" />
+  <Project Path="QuotePublisher.csproj" />
+</Solution>
