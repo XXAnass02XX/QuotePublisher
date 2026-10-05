@@ -30,4 +30,9 @@ public class Quote : Iquote
         }
         return false;
     }
+    
+    public override string ToString()
+    {
+        return $"bid : \"{bid}\" - ask \"{ask}\" instrument : {instrument}";
+    }
 }
