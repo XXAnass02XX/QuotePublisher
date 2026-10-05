@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="PricingTests/PricingTests.csproj" />
   <Project Path="QuotePublisher.Contracts/QuotePublisher.Contracts.csproj" />
   <Project Path="QuotePublisher/QuotePublisher.csproj" />
 </Solution>

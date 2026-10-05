@@ -1,5 +1,6 @@
 ﻿using NetMQ;
 using NetMQ.Sockets;
+using QuotePublisher.Contracts;
 using QuotePublisher.useful;
 
 namespace QuotePublisher;
@@ -11,6 +12,10 @@ public class LiveEngine
     public LiveEngine()
     {
         _quotes = new XXPricesSnapShot();
+    }
+    public LiveEngine(int len)
+    {
+        _quotes = new XXPricesSnapShot(len);
     }
 
     public void Run(PublisherSocket publisherSocket)
@@ -24,6 +29,11 @@ public class LiveEngine
             Console.WriteLine($"Publishing on: {publisherSocket.Options.LastEndpoint}");
             Thread.Sleep(1000); 
         }
+    }
+
+    public Quote NextQuoteInQueue()
+    {
+        return _quotes.Next();
     }
     
 }

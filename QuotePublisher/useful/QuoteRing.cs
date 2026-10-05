@@ -1,6 +1,4 @@
-﻿
-
-using QuotePublisher.Contracts;
+﻿using QuotePublisher.Contracts;
 
 namespace QuotePublisher.useful;
 

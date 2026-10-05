@@ -2,37 +2,37 @@
 
 public class Quote : Iquote
 {
-    private double bid{get;}
-    private double ask{get;}
-    private double volume;
-    private string instrument;
+    public double Bid{get;}
+    public double Ask{get;}
+    public double Volume;
+    public string Instrument;
 
     public Quote(double bid, double ask)
     {
-        this.bid = bid;
-        this.ask = ask;
-        this.volume = 1000000;
-        this.instrument = "Default";
+        this.Bid = bid;
+        this.Ask = ask;
+        this.Volume = 1000000;
+        this.Instrument = "Default";
     }
     public Quote(double bid, double ask, double volume, string instrument)
     {
-        this.bid = bid;
-        this.ask = ask;
-        this.volume = volume;
-        this.instrument = instrument;
+        this.Bid = bid;
+        this.Ask = ask;
+        this.Volume = volume;
+        this.Instrument = instrument;
     }
     
     public bool isEqual(Iquote quote)
     {
         if (quote is Quote otherQuote)
         {
-            return (this.bid == otherQuote.bid) && (this.ask == otherQuote.ask);
+            return (this.Bid == otherQuote.Bid) && (this.Ask == otherQuote.Ask);
         }
         return false;
     }
     
     public override string ToString()
     {
-        return $"bid : \"{bid}\" - ask \"{ask}\" instrument : {instrument}";
+        return $"bid : \"{Bid}\" - ask \"{Ask}\" instrument : {Instrument}";
     }
 }

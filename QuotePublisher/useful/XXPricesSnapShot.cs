@@ -12,4 +12,12 @@ public class XXPricesSnapShot : QuoteRing
             Quotes[i] = new Quote(100 + i, 101 + i); 
         }
     }
+    public XXPricesSnapShot(int len)
+    {
+        Quotes = new Quote[len];
+        for (int i = 0; i < Quotes.Length; i++)
+        {
+            Quotes[i] = new Quote(100 + i, 101 + i); 
+        }
+    }
 }
