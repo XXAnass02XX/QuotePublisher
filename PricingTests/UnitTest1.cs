@@ -3,7 +3,7 @@ using QuotePublisher.Contracts;
 
 namespace PricingTests;
 
-public class Tests
+public class Tests  
 {
     private LiveEngine _engine ;
     [SetUp]
